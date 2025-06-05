@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basketbol Dünyası</title>
+    <title>Basketbol Branşı</title>
     <style>
         /* Genel Stiller */
         :root {
@@ -417,10 +417,9 @@
                     <li><a href="#duyurular">Duyurular</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-btn">
-                ☰
+            <div class="mobile-menu-btn" onclick="toggleMobileNav()">☰</div>
             </div>
-            <nav class="mobile-nav">
+        <nav class="mobile-nav" id="mobileNav">
                 <ul>
                     <li><a href="#anasayfa">Anasayfa</a></li>
                     <li><a href="#tarihce">Tarihçe</a></li>
@@ -435,8 +434,8 @@
     <!-- Hero Section -->
     <section id="anasayfa" class="hero">
         <div class="container">
-            <h2>Basketbolun Büyüleyici Dünyasına Hoşgeldiniz</h2>
-            <p>En güncel haberler, lig bilgileri ve basketbol tarihi burada!</p>
+            <h2>Basketbolun Branşının Büyüleyici Dünyasına Hoşgeldiniz</h2>
+            <p>En güncel haberler, basketbol bilgileri ve basketbol tarihi burada!</p>
         </div>
     </section>
 
@@ -446,9 +445,7 @@
             <h2>Basketbolun Doğuşu ve Günümüzdeki Yeri</h2>
             <div class="content">
                 <img src="https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Basketbol Tarihi" class="float-left">
-                <p>Basketbol, 1891 yılında Dr. James Naismith tarafından Massachusetts'te icat edildi. Kış aylarında öğrencilerinin kapalı alanda oynayabileceği bir spor arayışındaydı. İlk oyun, sepete top atma fikriyle başladı ve zamanla dünya çapında popüler bir spor haline geldi.</p>
-                <p>Günümüzde basketbol, NBA, EuroLeague ve FIBA Dünya Kupası gibi büyük organizasyonlarla milyonlarca hayranı olan küresel bir spordur. Oyun kuralları ve stratejileri gelişmeye devam etmekte, yeni yetenekler bu spora renk katmaktadır.</p>
-                <p>Basketbol sadece bir spor dalı olmanın ötesinde, kültürleri birleştiren, gençlere disiplin ve takım çalışmasını öğreten önemli bir araçtır. Dünya çapında milyonlarca insan tarafından hem profesyonel hem de amatör olarak oynanmaktadır.</p>
+<p>Basketbol, 1891 yılında Dr. James Naismith tarafından ABD'nin Massachusetts eyaletinde icat edildi. Kış aylarında öğrenciler için salon içinde oynanabilecek güvenli bir spor arayışıyla doğdu. Başlangıçta iki şeftali sepetine top atma oyunu olarak başlayan basketbol, kısa sürede tüm dünyaya yayıldı.</p> <p>Bugün basketbol, NBA, EuroLeague ve FIBA gibi büyük organizasyonlarla milyonlarca insanı etkileyen küresel bir spordur. Michael Jordan, LeBron James gibi efsaneler, bu sporu sadece sahada değil kültürel alanda da temsil etmişlerdir. Kadın basketbolu da WNBA gibi liglerle büyük gelişim göstermiştir.</p> <p>Basketbol sadece bir oyun değil; takım ruhu, strateji, disiplin ve liderlik gibi değerleri öğreten bir hayat okuludur. Mahalle sahalarından olimpiyatlara kadar her yerde tutkuyla oynanır. Bugün hem profesyonel hem amatör düzeyde dünya genelinde milyonlarca kişi tarafından sevilerek oynanmaktadır.</p>
             </div>
         </div>
     </section>
@@ -563,5 +560,21 @@
             <p>&copy; 2023 Basketbol Dünyası. Tüm hakları saklıdır.</p>
         </div>
     </footer>
+<script>
+    function toggleMobileNav() {
+        const nav = document.getElementById('mobileNav');
+        nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Mobil menüdeki linklere tıklanınca menüyü kapat
+    document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll('#mobileNav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileNav').style.display = 'none';
+            });
+        });
+    });
+</script>
 </body>
 </html>
